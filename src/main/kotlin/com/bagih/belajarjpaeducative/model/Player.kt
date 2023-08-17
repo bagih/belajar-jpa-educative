@@ -1,17 +1,14 @@
 package com.bagih.belajarjpaeducative.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.Id
-import jakarta.persistence.Table
+import jakarta.persistence.*
 import java.util.Date
 
 @Entity
 @Table(name = "Player")
 data class Player(
     @Id
-    @GeneratedValue
-    private var id: Int,
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private var id: Int? =  null,
     private var name: String,
     private var nationality: String,
     private var birthDate: Date,
