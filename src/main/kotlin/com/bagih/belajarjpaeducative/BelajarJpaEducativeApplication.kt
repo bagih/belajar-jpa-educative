@@ -29,6 +29,7 @@ class BelajarJpaEducativeApplication(
 		} catch (e: Exception){
 			logger.info("no such item in specific id")
 		}
+		logger.info("get all players: ${repository.getAllPlayers()}")
 	}
 
 

@@ -5,6 +5,7 @@ import java.util.Date
 
 @Entity
 @Table(name = "Player")
+@NamedQuery(name = "get_all_players", query = "SELECT p FROM Player p")
 data class Player(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
